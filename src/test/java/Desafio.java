@@ -12,7 +12,7 @@ public class Desafio {
     private PageObjectDesafio page;
 
     @Before//executar primeiro
-    public void main(){//abrindo o driver do google chrome
+    public void bootUp(){//abrindo o driver do google chrome
         WebDriverManager.chromedriver().setup();
         this.driver = new ChromeDriver();
         driver.get("https://testpages.herokuapp.com/styled/basic-html-form-test.html");
@@ -20,29 +20,29 @@ public class Desafio {
     }
 
     @After
-    public void TestFim(){
+    public void finish(){
         driver.quit();//fechando drive , após cada teste
     }
 
 
     @Test//o programa reconhece que aq é um text
-    public void fluxoPrincipal(){
+    public void mainStream(){
 
-        page.escreverUserName("EltonFelix");//acessando o campo name e digitando "Eltonfelix"
-        page.escreverPassword("860892");//acessando o campo password e digitando "860892"
+        page.writeUserName("EltonFelix");//acessando o campo name e digitando "Eltonfelix"
+        page.writePassword("860892");//acessando o campo password e digitando "860892"
 
-        page.limpandoComments();//limpando o campo comments
-        page.escreverComments("simbora pro Desafio!");//inserindo no campo comments
+        page.cleaningUpComments();//limpando o campo comments
+        page.writeComments("simbora pro Desafio!");//inserindo no campo comments
 
-        page.interagindoCheckBox3();//desmarcando o terceiro checkBox
-        page.interagindoCheckBox1();//marcando o primeiro checkBok
+        page.interactingCheckBox3();//desmarcando o terceiro checkBox
+        page.interactingCheckBox1();//marcando o primeiro checkBok
 
-        page.interagindoRadio1();//marcando o radio 1
+        page.interactingRadio1();//marcando o radio 1
 
-        page.interagindoSelectValues4();//desmarcando o quarto select values
-        page.interagindoSelectValues2();//marcando no segundo select values
+        page.interactingSelectValues4();//desmarcando o quarto select values
+        page.interactingSelectValues2();//marcando no segundo select values
 
-        page.interagindoDropdown3();//clicando no dropdown 3
+        page.interactingDropdown3();//clicando no dropdown 3
 
         page.submit();//clicando no botão submite
 
@@ -57,8 +57,8 @@ public class Desafio {
     }
 
     @Test
-    public void fluxoSecundario(){
-        page.limpandoComments();//limpando checkBox comments
+    public void SecondaryFlow(){
+        page.cleaningUpComments();//limpando checkBox comments
 
         page.submit();//clicando no botão submit
 
