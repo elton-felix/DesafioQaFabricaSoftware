@@ -26,6 +26,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia:
 
 - [Java](https://dev.java/)
 - [Junit](https://junit.org/junit5/)
+- [Seleium](https://www.selenium.dev/)
 
 ## :speech_balloon: Projeto:
 Prosposto como desafio da equipe de QA(Quality assurence) da fabrica de software do UBTECH do Unipê.
